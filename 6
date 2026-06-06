@@ -12,7 +12,7 @@ def caesar(text, shift):
     result = ""
     for char in text:
         if char.isalpha():
-            # Shift within A-Z or a-z range
+           
             start = ord('A') if char.isupper() else ord('a')
             result += chr((ord(char) - start + shift) % 26 + start)
         else:
