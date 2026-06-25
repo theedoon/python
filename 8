@@ -13,6 +13,14 @@ accounts['Updated_Balance'] = accounts['Balance'] + transactions
 print("--- Bank Account Updates ---")
 print(accounts)
 
+OUTPUT:
+--- Bank Account Updates ---
+       Balance  Updated_Balance
+Acc_1     5000             4500
+Acc_2     3000             5000
+Acc_3     1500             1300
+
+
 # 8b. Student Ranking System
 import pandas as pd
 data = {
@@ -30,3 +38,13 @@ df['Rank'] = df['Marks'].rank(ascending=False, method='min')
 
 print("\n--- Student Rankings ---")
 print(df)
+
+OUTPUT:
+
+--- Student Rankings ---
+      Name  Marks  Rank
+1      Bob     92   1.0
+3    David     92   1.0
+0    Alice     85   3.0
+2  Charlie     78   4.0
+
