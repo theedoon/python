@@ -1,3 +1,6 @@
+10. Develop a program using Python and Pandas to read students’ daily activity data from a CSV file 
+(including study hours, sports hours, and sleep hours) and perform analysis on the data.
+
 import pandas as pd
 
 try:
