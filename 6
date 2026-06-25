@@ -1,4 +1,4 @@
- 6a. Compare List vs Set for Duplicate Analysis
+ 6a.
 
 users_list = ["alice", "bob", "alice", "charlie", "bob"]
 users_set = set(users_list)
@@ -7,7 +7,13 @@ print(f"Original List (with duplicates): {users_list}")
 print(f"Unique Set (duplicates removed): {users_set}")
 print(f"Total duplicates found: {len(users_list) - len(users_set)}")
 
-# 6b. Caesar Cipher (Encryption and Decryption)
+OUTPUT:
+Original List (with duplicates): ['alice', 'bob', 'alice', 'charlie', 'bob']
+Unique Set (duplicates removed): {'charlie', 'bob', 'alice'}
+Total duplicates found: 2
+
+
+# 6b.
 def caesar(text, shift):
     result = ""
     for char in text:
@@ -26,3 +32,10 @@ decrypted = caesar(encrypted, -3)
 print(f"\nOriginal: {msg}")
 print(f"Encrypted: {encrypted}")
 print(f"Decrypted: {decrypted}")
+
+
+OUTPUT;
+Original: Hello Python!
+Encrypted: Khoor Sbwkrq!
+Decrypted: Hello Python!
+
