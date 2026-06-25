@@ -1,0 +1,101 @@
+4a.
+
+
+class ComplexNum:
+    def __init__(self, r, i):
+        self.r, self.i = r, i
+
+    def __add__(self, other):
+        return ComplexNum(self.r + other.r, self.i + other.i)
+
+    def __str__(self):
+        return f"{self.r} + {self.i}j"
+
+print("--- Enter first complex number ---")
+r1 = float(input("Enter real part: "))
+i1 = float(input("Enter imaginary part: "))
+
+print("\n--- Enter second complex number ---")
+r2 = float(input("Enter real part: "))
+i2 = float(input("Enter imaginary part: "))
+
+c1 = ComplexNum(r1, i1)
+c2 = ComplexNum(r2, i2)
+
+print(f"\nResult of Addition: {c1 + c2}")
+
+OUTPUT:
+--- Enter first complex number ---
+Enter real part: 2
+Enter imaginary part: 5
+
+--- Enter second complex number ---
+Enter real part: 3
+Enter imaginary part: 6
+
+Result of Addition: 5.0 + 11.0j
+
+
+4b.
+
+
+class Product:
+    def __init__(self, name):
+        self.name = name
+    def p_info(self): 
+        print(f"Product: {self.name}")
+
+class Discount:
+    def __init__(self, rate):
+        self.rate = rate
+    def d_info(self): 
+        print(f"Discount: {self.rate}%")
+
+class Order(Product, Discount):
+    def __init__(self, name, rate):
+        Product.__init__(self, name)
+        Discount.__init__(self, rate)
+    
+    def show(self):
+        self.p_info()
+        self.d_info()
+
+def run_program():
+    try:
+       
+        prod_name = input("Enter product name: ").strip()
+        if not prod_name:
+            raise ValueError("Product name cannot be empty.")
+
+        
+        rate_input = input("Enter discount percentage (0-100): ")
+        disc_rate = float(rate_input) 
+        
+        if disc_rate < 0 or disc_rate > 100:
+            raise ValueError("Discount must be between 0 and 100.")
+
+
+        order = Order(prod_name, disc_rate)
+        print("\n--- Order Summary ---")
+        order.show()
+
+    except ValueError as e:
+        
+        print(f"Input Error: {e}")
+    except KeyboardInterrupt:
+        
+        print("\nProgram stopped by user.")
+    except Exception as e:
+        
+        print(f"An unexpected error occurred: {e}")
+
+if __name__ == "__main__":
+    run_program()
+
+  OUTPUT:
+  Enter product name: phone
+Enter discount percentage (0-100): 12
+
+--- Order Summary ---
+Product: phone
+Discount: 12.0%
