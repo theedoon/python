@@ -1,0 +1,44 @@
+5a.
+
+balance = 5000
+
+try:
+    amt = int(input("Enter amount to withdraw: "))
+    if amt > balance:
+        raise ValueError("Insufficient Balance! ")
+    if amt <= 0:
+        raise ValueError("Invalid Amount! ")
+    balance -= amt
+    print(f"Withdrawal Successful! New Balance: {balance}")
+except ValueError as e:
+    print(f"Error: {e}")
+
+
+OUTPUT:
+Enter amount to withdraw: 1500
+Withdrawal Successful! New Balance: 3500
+
+
+5b.
+
+def file_ops():
+    
+    with open("emp.txt", "w") as f:
+        f.write("ID: 101, Name: Alice\n")
+    
+    
+    with open("emp.txt", "a") as f:
+        f.write("ID: 102, Name: Bob\n")
+    
+    
+    with open("emp.txt", "r") as f:
+        print("\nEmployee Details from File:\n" + f.read())
+
+file_ops()
+
+
+OUTPUT:
+
+Employee Details from File:
+ID: 101, Name: Alice
+ID: 102, Name: Bob
