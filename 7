@@ -1,4 +1,4 @@
-# 7a. NumPy Array Manipulation (Sales Data)
+# 7a. 
 
 import numpy as np
 branch1 = np.array([10, 20, 30, 40, 50, 60])
@@ -15,7 +15,13 @@ print(f"Quarterly Split: {quarters}")
 print(f"Total: {np.sum(combined)}, Avg: {np.mean(combined):.2f}")
 print(f"Max: {np.max(combined)}, Min: {np.min(combined)}")
 
-# 7b. Grayscale Image using NumPy Matrix
+OUTPUT:
+Combined Sales: [10 20 30 40 50 60 15 25 35 45 55 65]
+Quarterly Split: [array([10, 20, 30]), array([40, 50, 60]), array([15, 25, 35]), array([45, 55, 65])]
+Total: 450, Avg: 37.50
+Max: 65, Min: 10
+
+# 7b. 
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -29,3 +35,6 @@ image_matrix = np.array([
 plt.imshow(image_matrix, cmap='gray')
 plt.title("Grayscale Matrix Image")
 plt.show()
+
+
+
